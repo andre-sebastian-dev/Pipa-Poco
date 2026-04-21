@@ -6,7 +6,7 @@ function Header(){
     return(
         <header className="header">
             <div className="home">
-                <h2>{<Link to="/"> Pipa Poço</Link>}</h2>
+                <h2>{<Link to="/"> &lt;- Pé de Pipa</Link>}</h2>
             </div>
             <ul className="menu">
                 <li>{<Link to="/pedido">Pedir</Link>}</li>

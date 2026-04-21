@@ -11,7 +11,10 @@ body{
 .home a{
     text-decoration: none;
     color: #ffffff;
+    border-radius: 3px;
+    padding: 0 7px;
 }
+
 .header{
     display: flex;
     align-items: center;
@@ -20,6 +23,7 @@ body{
     height: 45px;
     width: 100%;
     position: sticky;
+    top: 0;
     z-index: 9;
     
     

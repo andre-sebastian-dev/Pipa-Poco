@@ -1,0 +1,43 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    height: calc(100vh - 45px);
+   background: 
+  radial-gradient(circle at top left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+  url("../../images/imagem do main.png");
+    background-repeat: no-repeat;
+    background-size: 100% calc(100vh - 45px); 
+    background-position: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+.main img{
+    margin-left: 5%;
+    width: 300px;
+}
+.descricao-main{
+    
+    margin-left: 5%;
+    color: #FFF;
+}
+.descricao-main h1{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.descricao-main span{
+    font-style: italic;
+    font-size: 20px;
+    
+}

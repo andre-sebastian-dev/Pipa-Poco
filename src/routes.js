@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+//  ------Componentes-------
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+//  --------Páginas---------
 import Home from "./Pages/Home/Home";
 import Pedido from "./Pages/Pedido/Pedido";
 import Sobre from "./Pages/Sobre/Sobre";
@@ -22,6 +26,7 @@ function Navegação(){
 
     <Route path="/*" element={<Error/>}/>
 </Routes>
+<Footer/>
 </BrowserRouter>
     )
 }
