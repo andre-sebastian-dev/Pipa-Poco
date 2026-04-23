@@ -7,8 +7,11 @@
 }
 .container{
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
+
+/* ============ Main bacground =============*/
 .main{
     display: flex;
     height: calc(100vh - 45px);
@@ -27,8 +30,13 @@
     margin-left: 5%;
     width: 300px;
 }
+
+/* ============ Main Hero ============ */
+
 .descricao-main{
-    
+    display: flex;
+    flex-direction: column;
+    width: 350px;
     margin-left: 5%;
     color: #FFF;
 }
@@ -39,5 +47,71 @@
 .descricao-main span{
     font-style: italic;
     font-size: 20px;
-    
+    margin-bottom: 10px;
 }
+.descricao-main a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    color: #000;
+    height: 40px;
+    width: 70%;
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.7s;
+}
+.descricao-main a:hover{
+    transform: scale(1.1);
+}
+/* =============== Secão-1 =================*/
+.descricao-secao{
+    background-color: #FFF;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    border-radius: 6px;
+}
+.descricao-secao h2{
+    padding: 0 4% ;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.descricao-secao p{
+    padding: 0 4%;
+    width: 90%;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+/* ============ seção 2 =============*/
+
+.descricao-secao-2{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    margin: 55px 0;
+    width: 80%;
+    
+    
+    padding: 25px 0;
+    border-radius: 6px;
+}
+.descricao-secao-2 h2{
+    padding: 0 4% ;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.descricao-secao-2 p{
+    padding: 0 4%;
+    width: 90%;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
