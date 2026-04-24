@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
         <div className="container">
             <main className="main">
                 <div className="descricao-main">
-                    <h1>Pé de Pipa</h1>
+                    <h1>Pipa Poço</h1>
                     <span>Mais que água. Tranquilidade para o seu dia a dia.</span>
                     <Link to="/pedido">Faça seu Pedido</Link>
                 </div>
@@ -46,18 +46,56 @@ import { Link } from "react-router-dom";
 
             <section className="descricao-secao-2">
                 <h2>
-                    Serviços
+                    Nossos Serviços
                 </h2>
-                <p>
-                     Sobre os nossos serviços lorem blabla bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto xo dlica
-                    i gunai goia tuisol fuledimarto xo dlica i gunai tiforme jofundio to goia tuisol fuledimarto xo goia tuisol 
-                    bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto.
-                </p>
-                <p>
-                    tiforme jofundio to goia tuisol fuledimarto xo goia tuisol 
-                    bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto flueque tiforme jofundio to goia tuisol fuledi
-                    marto xo dlica i gunai, goia tuisol fuledimarto xo dlica i gunai tiforme.
-                </p>
+                <ul className="ul-serviços">
+                    <li>
+                        <h3>Abastecimento residencial</h3>
+                        <span>
+                            Fornecimento de água potável para casas e comunidades com acesso limitado, garantindo praticidade
+                            e segurança no dia a dia.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>Abastecimento para obras</h3>
+                        <span>
+                            Atendimento a construções civis com entrega contínua de água para preparo de concreto, limpeza
+                            e demais necessidades do canteiro.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>
+                           Fornecimento para empresas 
+                        </h3>
+                        <span>
+                           Soluções sob medida para comércios e indústrias que precisam de abastecimento regular ou emergencial.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>
+                            Atendimento emergencial
+                        </h3>
+                        <span>
+                            Entrega rápida em situações de falta d’água, seca ou interrupções no fornecimento público.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>
+                            Abastecimento rural
+                        </h3>
+                        <span>
+                            Suporte a propriedades no campo, auxiliando na manutenção de atividades agrícolas e no consumo diário.
+                        </span>
+                    </li>
+                    <li>
+                        <h3>
+                            Transporte de água não potável
+                        </h3>
+                        <span>
+                            Distribuição para fins específicos, como irrigação, limpeza pesada e controle de poeira.
+                        </span>
+                    </li>
+                </ul>
             </section>
             
             

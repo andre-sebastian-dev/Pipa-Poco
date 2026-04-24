@@ -34,8 +34,10 @@
 /* ============ Main Hero ============ */
 
 .descricao-main{
+
     display: flex;
     flex-direction: column;
+    justify-content: right;
     width: 350px;
     margin-left: 5%;
     color: #FFF;
@@ -79,12 +81,12 @@
     border-radius: 6px;
 }
 .descricao-secao h2{
-    padding: 0 4% ;
+    padding: 0 6% ;
     font-size: 35px;
     padding-bottom: 20px;
 }
 .descricao-secao p{
-    padding: 0 4%;
+    padding: 0 6%;
     width: 90%;
     font-size: 25px;
     padding-bottom: 15px;
@@ -104,14 +106,27 @@
     border-radius: 6px;
 }
 .descricao-secao-2 h2{
-    padding: 0 4% ;
+    padding: 0 6% ;
     font-size: 35px;
     padding-bottom: 20px;
 }
 .descricao-secao-2 p{
-    padding: 0 4%;
+    padding: 0 6%;
     width: 90%;
     font-size: 25px;
     padding-bottom: 15px;
+}
+.descricao-secao-2 ul{
+    padding: 0 6%;
+    width: 90%;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+.ul-serviços h3{
+   font-size: 27px;
+   margin-bottom: 8;
+}
+.ul-serviços li{
+    margin-bottom: 14px;
 }
 

@@ -6,7 +6,13 @@ body{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 .home{
-    margin-left: 3%;
+    display: flex;
+    margin-left: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.home h2{
+    font-size: 25px;
 }
 .home a{
     text-decoration: none;
@@ -14,12 +20,20 @@ body{
     border-radius: 3px;
     padding: 0 7px;
 }
+.home img{
+    width: 40px;
+    height: 40px;
+    transition: all 0.7s;
+}
+.home img:hover{
+      transform: scale(1.1);
+}
 
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(0, 110, 255)  ;
+    background-color: #0464fb ;
     height: 45px;
     width: 100%;
     position: sticky;
@@ -41,14 +55,15 @@ body{
     background-color: #ffffff;
     margin: 5px ;
     padding-left: 10px;
-    border-radius: 3px;
-    
-    
-    
+    border-radius: 3px;  
+    transition: all 0.7s; 
+}
+.menu li:hover{
+    transform: scale(1.1);
 }
 .menu a{
     text-decoration: none;
-    color:  rgb(0, 110, 255);
+    color:  #0464fb;
     margin-right: 10px;
     
 }

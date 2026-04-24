@@ -24,7 +24,7 @@ function Navegação(){
     <Route path="/conta" element={<Conta/>}/>
 
 
-    <Route path="/*" element={<Error/>}/>
+    <Route path="*" element={<Error/>}/>
 </Routes>
 <Footer/>
 </BrowserRouter>
