@@ -23,10 +23,7 @@ body{
 .home img{
     width: 40px;
     height: 40px;
-    transition: all 0.7s;
-}
-.home img:hover{
-      transform: scale(1.1);
+    
 }
 
 .header{
@@ -46,7 +43,7 @@ body{
 /*rgb(0, 110, 255)*/
 .menu{
     display: flex;
-    margin-right: 3%;
+    margin-right: 30px;
 }
 .menu li{
     font-size: 20px;
@@ -55,11 +52,12 @@ body{
     background-color: #ffffff;
     margin: 5px ;
     padding-left: 10px;
+    border: 1px solid #0464fb;
     border-radius: 3px;  
-    transition: all 0.7s; 
+     
 }
 .menu li:hover{
-    transform: scale(1.1);
+    border: 1px solid #000;
 }
 .menu a{
     text-decoration: none;
