@@ -3,7 +3,7 @@ import "./cadastro.css"
 
 // import das hooks
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // import firebase toos
 import { auth } from "../../firebaseConnection";
@@ -15,6 +15,7 @@ function Cadastro(){
     const [sobrenome,setSobrenome] = useState('');
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
+    const navigate = useNavigate()
     
 
   async function cadastrarUsuario() {
@@ -36,6 +37,8 @@ function Cadastro(){
     setSenha('');
     setNome('');
     setSobrenome('');
+
+    navigate("/pedido")
 
   } catch (error) {
     if (error.code === 'auth/weak-password') {

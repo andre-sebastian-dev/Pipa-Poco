@@ -1,11 +1,12 @@
 import "./sign-in.css"
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "../../firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 function SignIn(){
+    const navigate = useNavigate()
   const [loginEmail, setLoginEmail] = useState('')
   const [loginSenha, setLoginSenha] = useState('')
 
@@ -17,6 +18,8 @@ async function fazerLogin(){
 
         setLoginEmail('')
         setLoginSenha('')
+
+        navigate("/pedido")
     })
     .catch((error)=>{
         if(error.code === "auth/wrong-password"){
