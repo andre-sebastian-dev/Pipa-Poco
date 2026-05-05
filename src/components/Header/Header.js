@@ -25,13 +25,13 @@ function Header(){
   return(
     <header className="header">
       <div className="home">
-        <Link to="/"><img src={img}/></Link>
+        <Link to="/"><img src={img} alt="ícone de Home"/></Link>
         <h2><Link to="/">Pipa Poço</Link></h2>
       </div>
 
       <ul className="menu">
         <li>
-          <a href="#" onClick={handlePedir}>Pedir</a>
+          <button onClick={handlePedir}>Pedir</button>
         </li>
         <li><Link to="/conta">Conta</Link></li>
         <li><Link to="/sobre">Sobre</Link></li>

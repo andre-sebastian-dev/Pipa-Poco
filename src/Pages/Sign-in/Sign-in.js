@@ -6,30 +6,30 @@ import { auth } from "../../firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 function SignIn(){
-    const navigate = useNavigate()
-  const [loginEmail, setLoginEmail] = useState('')
-  const [loginSenha, setLoginSenha] = useState('')
+  const navigate = useNavigate();
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginSenha, setLoginSenha] = useState('');
+  
 
+
+  // Login do site
 async function fazerLogin(){
-    await signInWithEmailAndPassword(auth,loginEmail,loginSenha)
-    .then((value)=>{
-        console.log("login feito com sucesso")
-        console.log(value.user)
+  try {
+    const value = await signInWithEmailAndPassword(auth, loginEmail, loginSenha);
 
-        setLoginEmail('')
-        setLoginSenha('')
+    console.log("login feito com sucesso", value.user);
 
-        navigate("/pedido")
-    })
-    .catch((error)=>{
-        if(error.code === "auth/wrong-password"){
-            alert("Senha Errada") 
-        }else if(error.code ==="auth/user-not-found"){
-            alert("Usuário não encontrado")
-        }else if(error.code === "auth/invalid-email"){
-            alert("Email inválido")
-        }
-    })
+    navigate("/pedido");
+
+  } catch (error) {
+    if(error.code === "auth/wrong-password"){
+      alert("Senha Errada") 
+    } else if(error.code === "auth/user-not-found"){
+      alert("Usuário não encontrado")
+    } else if(error.code === "auth/invalid-email"){
+      alert("Email inválido")
+    }
+  }
 }
     return(
         <article className="container">
@@ -62,6 +62,8 @@ async function fazerLogin(){
                        <button type="button" className="log-button" onClick={fazerLogin}>fazer Login</button>
                        
                     </div>
+
+                    <p>Esqueceu sua Senha? <Link to="/change-password">Crie uma nova</Link></p>
                 </form>
 
 
