@@ -8,7 +8,6 @@ import Footer from "./components/Footer/Footer";
 //  --------Páginas---------
 import Cadastro from "./Pages/Cadastro/Cadastro";
 import Conta from "./Pages/Conta/Conta";
-import ChangePassword from "./Pages/Change-Password/ChangePassword";
 import Error from "./Pages/Error/Error";
 import Home from "./Pages/Home/Home";
 import Pedido from "./Pages/Pedido/Pedido";
@@ -29,7 +28,6 @@ function Navegação(){
     <Route path="/" element={<Home/>}/>
     <Route path="/cadastro" element={<Cadastro/>}/>
     <Route path="/conta" element={<Conta/>}/>
-    <Route path="/change-password" element={<ChangePassword/>}/>
     <Route path="/pedido" element={<PrivateRoute><Pedido/></PrivateRoute>}/>
     <Route path="/reset-password" element={<ResetPassword/>}/>
     <Route path="/sign-in" element={<SignIn/>}/> 

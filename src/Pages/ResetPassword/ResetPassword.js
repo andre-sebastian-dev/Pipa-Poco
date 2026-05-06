@@ -17,7 +17,7 @@ function ResetPassword(){
 
     try {
       await sendPasswordResetEmail(auth, email, {
-        url: "http://localhost:3000/change-password",
+        url: "http://localhost:3000/sign-in",
         handleCodeInApp: true
       });
 
