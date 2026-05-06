@@ -55,6 +55,8 @@ async function fazerLogin(){
                         onChange={(e)=> setLoginSenha(e.target.value)}
                     ></input>
 
+                    <p>Esqueceu sua Senha? <Link to="/reset-password">Crie uma nova</Link></p>
+
                     <div className="buttons">
                        
                        <Link className="cad-button" to="/cadastro">Criar conta</Link>
@@ -63,7 +65,7 @@ async function fazerLogin(){
                        
                     </div>
 
-                    <p>Esqueceu sua Senha? <Link to="/change-password">Crie uma nova</Link></p>
+                    
                 </form>
 
 
