@@ -33,14 +33,19 @@ import { Link } from "react-router-dom";
             <section className="descricao-secao-2">
                 <h2>Como Pedir?</h2>
                 <p>
-                    para pedir lorem blabla bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto xo dlica i gunai
-                    goia tuisol fuledimarto xo dlica i gunai tiforme jofundio to goia tuisol fuledimarto xo goia tuisol 
-                    bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto.
+                       Para fazer seu pedido basta clicar no botão pedir na parte superior direita, se você não tiver feito seu login 
+                    será redirecionado para uma página onde poderá faze-lo, onde será necessário informar um email funcional e criar 
+                    uma senha. 
                 </p>
                 <p>
-                    jotombe flueque tiforme jofundio to goia tuisol fuledimarto xo dlica i gunai
-                    goia tuisol fuledimarto xo dlica i gunai tiforme jofundio to goia tuisol fuledimarto xo goia tuisol 
-                    bla jotombe flueque tiforme jofundio to goia tuisol fuledimarto.
+                    Se ainda não tiver uma conta você precisa, ainda na página de login, clicar no botão criar conta, onde será necessário
+                    informar seu nome, sobrenome, email e criar uma senha, essa senha será a mesma que você usará futuramente para fazer seu
+                    login, após clicar no botão criar conta, você estará automáticamente logado.
+                </p>
+                <p>
+                    Após isso você poderá acessar livremente a página de pedido, ao preecher o formulário e clicar em "fazer pedido" 
+                    seu pedido será enviado para nossa central e será analizado, após alguns minutos você receberá uma confirmação 
+                    no seu email
                 </p>
             </section>
 
