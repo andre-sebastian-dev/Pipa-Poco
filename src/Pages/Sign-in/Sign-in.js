@@ -3,7 +3,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "../../firebaseConnection";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword,
+         signOut
+ } from "firebase/auth";
 
 function SignIn(){
   const navigate = useNavigate();
@@ -15,10 +17,24 @@ function SignIn(){
   // Login do site
 async function fazerLogin(){
   try {
-    const value = await signInWithEmailAndPassword(auth, loginEmail, loginSenha);
+    const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginSenha);
+    
+    const user = userCredential.user
 
-    console.log("login feito com sucesso", value.user);
+    console.log("login feito com sucesso", user);
 
+    await user.reload();
+
+    if(!user.emailVerified){
+
+      alert("Verifique seu email para fazer o login")
+
+      await signOut(auth);
+      return;
+    }
+
+    alert("Login realizado com secesso.")
+    
     navigate("/pedido");
 
   } catch (error) {

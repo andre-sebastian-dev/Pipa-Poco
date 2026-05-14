@@ -7,7 +7,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 // import firebase toos
 import { auth } from "../../firebaseConnection";
-import { createUserWithEmailAndPassword, updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword,
+         updateProfile,
+         sendEmailVerification,
+         signOut  } from "firebase/auth";
 
 
 function Cadastro(){
@@ -26,19 +29,18 @@ function Cadastro(){
       displayName: `${nome} ${sobrenome}`
     });
 
-    await userCredential.user.reload();
+    await sendEmailVerification(userCredential.user);
 
-    console.log("Usuário atualizado:", userCredential.user);
-    console.log("Nome:", userCredential.user.displayName);
+    await signOut(auth)
 
-    alert("Cadastro concluido com sucesso");
+    alert("Conta criada verifique seu email antes de fazer login.");
 
     setEmail('');
     setSenha('');
     setNome('');
     setSobrenome('');
 
-    navigate("/pedido")
+    navigate("/sign-in")
 
   } catch (error) {
     if (error.code === 'auth/weak-password') {
@@ -98,7 +100,6 @@ function Cadastro(){
                        <button type="button" className="button-cad" onClick={cadastrarUsuario}>Criar conta</button>
                     </div>
 
-                    
                 </form>
             </section>
         </article>
