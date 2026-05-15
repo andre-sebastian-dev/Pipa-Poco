@@ -80,11 +80,11 @@ async function fazerLogin(){
                        <button type="button" className="log-button" onClick={fazerLogin}>fazer Login</button>
                        
                     </div>
-
-                    
                 </form>
 
+                <div className="area-direita-sign-in">
 
+                </div>
         </section>
         </article>
     )

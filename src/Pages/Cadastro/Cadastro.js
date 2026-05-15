@@ -85,11 +85,11 @@ function Cadastro(){
                         onChange={(e)=> setEmail(e.target.value)}
                      ></input>
 
-                    <label>Digite sua Senha</label>
+                    <label>Crie sua Senha</label>
                     <input 
                         type="password" 
                         autoComplete="new-password"
-                        placeholder="Sua senha..."
+                        placeholder="sua senha..."
                         value={senha}
                         onChange={(e)=> setSenha(e.target.value)}
                     ></input>
@@ -101,6 +101,8 @@ function Cadastro(){
                     </div>
 
                 </form>
+
+                <div className="quadro-direito-cadastro"></div>
             </section>
         </article>
     )
