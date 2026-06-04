@@ -1,6 +1,6 @@
 import "./pedido.css"
 import { useState } from "react";
-import {addDoc, collection } from "firebase/firestore";
+import {addDoc, collection, query, where, getDocs } from "firebase/firestore";
 
 import { auth, db} from "../../firebaseConnection";
 
@@ -24,8 +24,7 @@ function Pedido(){
     const ano = String(dataAtual.getFullYear());
     const dataModificada = `${dia}/${mes}/${ano}`;
 
-    
-
+    // Função que valida o cpf 
      function validarCPF(cpf){
 
         // remove pontos e traços
@@ -95,6 +94,33 @@ function Pedido(){
         try{
             e.preventDefault();
 
+            //referencia dos pedidos
+    const pedidosRef = collection(db, "informacao-do-pedido");
+    const q = query(
+        pedidosRef,
+        where("email", "==", auth.currentUser.email)
+    );
+
+    const snapshot = await getDocs(q);
+
+    const possuiPedidoAtivo = 
+    snapshot.docs.some((doc)=>{
+        const dados = doc.data();
+
+        return(
+            dados.status === "em_analise" ||
+            dados.status === "em_preparo" ||
+            dados.status === "a_caminho"
+        );
+    });
+
+    if(possuiPedidoAtivo){
+        alert(
+            "Você já possui um pedido em andamento."
+        );
+        return;
+    }
+
               // valida campos vazios
         if(
             !nome ||
@@ -122,6 +148,7 @@ function Pedido(){
             email: auth.currentUser.email,
             nome: nome,
             ruaNumero: ruaNumero,
+            status: "em_analise",
             telefone: telefone,
         })
         
